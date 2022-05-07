@@ -1,0 +1,91 @@
+cluster-input {
+  display: inline-block;
+  margin: 1ex 1ex 1ex 0;
+  width: auto;
+
+  input {
+    position: relative;
+    display: block;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+
+    &:checked ~ label::before {
+      background-color: var(--white);
+      box-shadow: 0 0 0 4px inset var(--blue);
+      border-color: var(--white);
+    }
+
+    &:checked ~ label {
+      background-color: var(--blue);
+      color: #fff;
+      border-color: var(--blue-dark);
+    }
+
+    &:checked ~ label:hover::before {
+      background-color: var(--white);
+      border-color: var(--white);
+      box-shadow: 0 0 0 4px inset var(--blue);
+    }
+  }
+
+  label {
+    font-weight: 400;
+    cursor: pointer;
+    color: var(--gray-5);
+    display: grid;
+    grid-template-columns: 2em auto;
+    grid-auto-flow: dense;
+    align-items: center;
+    gap: 0.66ex;
+    padding: 1ex 1.88ex 1.66ex 1ex;
+    border: 1.66px solid var(--gray-5);
+    border-radius: 3px;
+    box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.06), 0 0ex 0ex 0ex rgba(10, 10, 10, 0);
+
+    &::before {
+      content: ' ';
+      position: relative;
+      display: block;
+      border: 1px solid var(--gray-5);
+      top: 0;
+      left: 0;
+      border-radius: 100%;
+      width: 1.22em;
+      height: 1.22em;
+    }
+
+    &:hover {
+      color: var(--black);
+      box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.08), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.33);
+      border-color: var(--black);
+
+      &::before {
+        border: 1px solid var(--black);
+      }
+    }
+
+    p {
+      font-weight: 300;
+      grid-column: 2 / -1;
+      margin: 0;
+      font-size: 11pt;
+
+      &:empty {
+        display: none;
+      }
+    }
+  }
+
+  input[type='checkbox'] ~ label:before {
+    border-radius: 0;
+  }
+
+  input:focus ~ label {
+    border: 1.66px solid var(--black);
+    box-shadow: 0px 0px 0 0.5ex var(--yellow);
+  }
+}

@@ -1,0 +1,73 @@
+pin-input {
+  display: block;
+
+  .code-container {
+    display: flex;
+    margin: 1ex 0;
+    > * {
+      margin-right: 1em;
+    }
+  }
+
+  label div {
+    display: flex;
+    outline: none;
+    border: 1.66px solid var(--gray-5);
+    border-radius: 0.33ex;
+    background-color: #fff;
+    width: min-content;
+
+    &:hover {
+      border: 1.66px solid var(--black);
+      box-shadow: 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.33);
+    }
+
+    &:focus-within {
+      outline: none;
+      border: 1.66px solid var(--black);
+      box-shadow: 0px 0px 0 0.3ex inset var(--sand), 0px 0px 0 0.5ex var(--yellow);
+    }
+  }
+
+  input {
+    width: 4ex;
+    text-align: center;
+    border: none;
+    border-right: 1px solid var(--white);
+    font-size: large;
+    font-weight: 300;
+    padding: 1.4ex 0.2ex;
+    font-family: 'Inter';
+    color: var(--gray-6);
+    outline: none;
+
+    &:first-of-type {
+      border-top-left-radius: 0.33ex;
+      border-bottom-left-radius: 0.33ex;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 0.33ex;
+      border-bottom-right-radius: 0.33ex;
+    }
+
+    &::placeholder {
+      color: var(--white);
+      font-size: 14pt;
+    }
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type='number'] {
+    -moz-appearance: textfield;
+  }
+}

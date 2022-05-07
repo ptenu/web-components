@@ -1,0 +1,12 @@
+field-element {
+  display: block;
+  margin: 1rem 0 2rem;
+
+  .field-label {
+    display: block;
+    margin: 0;
+    font-size: 18pt;
+    font-weight: 500;
+    color: var(--blue-dark);
+  }
+}

@@ -1,0 +1,9 @@
+:host {
+  display: flex;
+
+  > *:not(:first-of-type):before {
+    content: '→';
+    color: var(--blue-gray);
+    margin: 0 0.5ex 0 1ex;
+  }
+}

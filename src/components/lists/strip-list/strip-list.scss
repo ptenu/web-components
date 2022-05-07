@@ -1,0 +1,45 @@
+strip-list {
+  display: block;
+
+  section > header {
+    border-bottom: 2px solid var(--sand);
+    padding: 0.33ex 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      color: var(--blue-dark);
+      font-weight: 500;
+      font-size: 16pt;
+      margin: 0;
+    }
+  }
+
+  ul.strip-list {
+    columns: 0;
+    column-width: unset;
+    margin: 0;
+    list-style: none;
+
+    li {
+      padding: 3px;
+      margin: 0;
+      border-radius: 0.33ex;
+      border-bottom: 1px solid var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 2.5rem;
+
+      aside {
+        display: flex;
+        gap: 1ex;
+      }
+
+      &::before {
+        display: none;
+      }
+    }
+  }
+}

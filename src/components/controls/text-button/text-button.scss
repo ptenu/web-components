@@ -1,0 +1,40 @@
+text-button {
+  button {
+    display: block;
+    min-height: 2em;
+    min-width: 2em;
+    border: none;
+    background-color: transparent;
+    border-radius: 0.34ex;
+    color: var(--blue);
+    padding: 1.22ex;
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:focus {
+      outline: 0.5ex solid var(--yellow);
+    }
+
+    &:hover {
+      background-color: rgba(10, 10, 10, 0.08);
+    }
+
+    &:active {
+      background-color: rgba(10, 10, 10, 0.15);
+    }
+
+    &.red {
+      color: var(--red);
+    }
+    &.green {
+      color: var(--green);
+    }
+    &.yellow {
+      color: var(--yellow);
+    }
+  }
+}

@@ -1,0 +1,96 @@
+toggle-input {
+  display: flex;
+  margin: 1ex 0;
+  height: 3em;
+  align-items: center;
+
+  input {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    margin: 0;
+    opacity: 0;
+    outline: none;
+  }
+
+  input ~ label {
+    display: inline-block;
+    position: relative;
+    margin-bottom: 0;
+    padding: 0 0 0 3.5em;
+    cursor: pointer;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    color: var(--gray-5);
+  }
+
+  input ~ label::before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    left: 0;
+    top: -0.8em;
+    width: 2.5em;
+    height: 2.5em;
+    background: transparent;
+    outline: none;
+    border: 2px solid var(--gray-5);
+    border-radius: 0.33ex;
+  }
+
+  input:checked ~ label::after {
+    content: '';
+    position: absolute;
+    top: 0em;
+    left: 0.9ex;
+    width: 1.5em;
+    height: 0.5em;
+    transform: rotate(-45deg);
+    border: solid;
+    border-color: var(--gray-6);
+    border-width: 0 0 0.44ex 0.44ex;
+    border-top-color: transparent;
+    background: transparent;
+  }
+
+  input:checked ~ label {
+    color: var(--black);
+  }
+
+  input:hover ~ label::before {
+    border: 2px solid var(--black);
+    box-shadow: 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.33);
+  }
+
+  input:hover ~ label {
+    color: var(--black);
+  }
+
+  input:focus ~ label::before {
+    border: 2px solid var(--black);
+    box-shadow: 0px 0px 0 0.3ex inset var(--sand), 0px 0px 0 0.5ex var(--yellow);
+  }
+
+  input[type='radio'] ~ label::before {
+    border-radius: 50%;
+    z-index: 10;
+  }
+
+  input[type='radio']:checked ~ label::after {
+    background: var(--gray-5);
+    border-radius: 50%;
+    border: 0.66em solid #fff;
+    transform: none;
+    top: -0.8em;
+    z-index: 0;
+    left: 0;
+    width: 2.5em;
+    height: 2.5em;
+  }
+
+  input[type='radio']:hover ~ label::after {
+    background: var(--black);
+  }
+}

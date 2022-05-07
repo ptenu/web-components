@@ -1,0 +1,48 @@
+mobile-disclosure {
+  display: block;
+
+  summary {
+    display: block;
+    cursor: pointer;
+    font-size: 17pt;
+    color: var(--blue);
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-underline-offset: 1px;
+    text-decoration-color: var(--sand);
+    margin-bottom: 1rem;
+
+    &:focus {
+      outline: none;
+      background-color: none;
+    }
+  }
+
+  summary::marker,
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    font-size: 1.22em;
+    color: var(--blue);
+    content: '+';
+    width: 1.12ex;
+    margin-right: 1ex;
+    display: inline-block;
+    text-align: center;
+  }
+
+  details[open] summary::before {
+    content: '-';
+  }
+}
+
+@media screen and (min-width: 876px) {
+  mobile-disclosure {
+    display: block;
+    summary {
+      display: none;
+    }
+  }
+}

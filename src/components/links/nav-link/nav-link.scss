@@ -1,0 +1,27 @@
+nav-link {
+  display: inline-block;
+  margin: -0.2em;
+}
+
+nav-link,
+p {
+  a {
+    color: var(--blue);
+    padding: 0.2em;
+    text-decoration: underline;
+    text-decoration-thickness: 0.15em;
+    cursor: pointer;
+  }
+
+  a:focus {
+    outline: none;
+    background-color: var(--yellow);
+    color: var(--black);
+  }
+
+  a:hover {
+    background-color: var(--blue);
+    text-decoration: none;
+    color: #fff;
+  }
+}

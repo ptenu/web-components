@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>PTU Elements</title>
+
+    <link rel="stylesheet" href="/build/ptu-elements.css" />
+
+    <script type="module" src="/build/ptu-elements.esm.js"></script>
+    <script nomodule src="/build/ptu-elements.js"></script>
+  </head>
+  <body>
+    <header-container
+      service-title="Components"
+      logo-src="https://static.peterboroughtenants.app/SVG/ptu_logo_header.svg"
+      logo-small="https://static.peterboroughtenants.app/SVG/ptu_logo_colour.svg"
+    >
+      <ul role="list">
+        <li>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <a href="/">News</a>
+        </li>
+        <li>
+          <a href="/">Policy</a>
+        </li>
+        <li>
+          <a href="/">Membership</a>
+        </li>
+        <li class="highlight">
+          <a href="/">Join</a>
+        </li>
+      </ul>
+    </header-container>
+    <content-container>
+      <section>
+        <breadcrumb-list>
+          <a href="/link1">Home</a>
+          <a href="/link2">Another page</a>
+          <a href="/link3">A page!</a>
+        </breadcrumb-list>
+      </section>
+      <section>
+        <loading-element></loading-element>
+      </section>
+    </content-container>
+
+    <content-container>
+      <header>
+        <h1>A standard section</h1>
+      </header>
+      <nav>
+        <mobile-disclosure label="Menu">
+          <ul role="list">
+            <li><nav-link>Home</nav-link></li>
+            <li><nav-link>Another page</nav-link></li>
+            <li><nav-link>News</nav-link></li>
+            <li><nav-link>Get help</nav-link></li>
+            <li>
+              <nav-link>Membership</nav-link>
+            </li>
+          </ul>
+        </mobile-disclosure>
+      </nav>
+      <aside>
+        <button-control theme="primary" aside="↗" label="Join">Become a member of the Union to get help when you need it</button-control>
+      </aside>
+      <section>
+        <p>Firstly, we have a link like this <a href="/apage">I forgot my password</a> in some text.</p>
+        <p>This is another paragraph!</p>
+        <p>
+          And this, is a very long paragraph. It was the best of times, it was the worst of times. A line written centuries ago, now more true than ever. While we adorn our lives
+          with the fruits of modernity, we need look no further than our own country for examples of pepole left behind.
+        </p>
+        <p>We can have the following components:</p>
+        <ul>
+          <li>*-container</li>
+          <li>*-section</li>
+          <li>*-control</li>
+          <li>*-link</li>
+          <li>*-block</li>
+          <li>*-input</li>
+          <li>*-element</li>
+          <li>*-list</li>
+        </ul>
+      </section>
+
+      <footer>
+        <details-list>
+          <detail-element label="This is a disclosure widget"> It hides detail which is then shown when you click on the title. </detail-element>
+          <detail-element label="What is this all about anyway?"> This is the answer to that question! </detail-element>
+          <detail-element label="This is another thing"> This is the answer to that question! </detail-element>
+        </details-list>
+      </footer>
+    </content-container>
+
+    <content-container>
+      <header>
+        <h1>Buttons</h1>
+      </header>
+      <section>
+        <button-control label="Start" aside="→"></button-control>
+        <br />
+        <button-control label="Basic button">This is a button with a description and an icon.</button-control>
+      </section>
+
+      <section style="display: flex; gap: 1ex; flex-wrap: wrap">
+        <button-control label="Blue button" theme="blue"></button-control>
+        <button-control label="Light button" theme="light"></button-control>
+        <button-control label="Red button" theme="red"></button-control>
+        <button-control label="Green button" theme="green"></button-control>
+        <button-control label="Primary button" theme="primary"></button-control>
+        <button-control label="Sand button" theme="sand"></button-control>
+        <button-control label="Yellow button" theme="yellow"></button-control>
+      </section>
+    </content-container>
+
+    <content-container>
+      <header>
+        <h1>Inputs</h1>
+      </header>
+
+      <section>
+        <form method="get" action="/">
+          <field-element label="Full name">
+            <text-input name="given_name" hint="Given name"></text-input>
+            <text-input name="family_name" hint="Family name"></text-input>
+          </field-element>
+          <field-element label="Date of birth">
+            <date-input name="date_of_birth"></date-input>
+          </field-element>
+
+          <field-element label="Postcode">
+            <postcode-input name="postcode"></postcode-input>
+          </field-element>
+          <field-element label="Do you like me?" use-label="false">
+            <blockquote>This is some blockwuote text</blockquote>
+            <toggle-input name="toggle" value="Yes" label="Yes" single></toggle-input>
+            <toggle-input name="toggle" value="No" label="No" single></toggle-input>
+          </field-element>
+
+          <field-element label="Which of these applies to you?" use-label="false">
+            <cluster-input name="tenure" value="pr" label="Private rent" single></cluster-input>
+            <cluster-input name="tenure" value="sr" label="Social rent" single></cluster-input>
+            <cluster-input name="tenure" value="oo" label="Owner occupier" single></cluster-input>
+          </field-element>
+
+          <field-element label="How much do you want to pay?">
+            <blockquote>Most members pay an hours wage per month, but you can chose to pay whatever you can afford.</blockquote>
+            <money-input name="contribution" min="3.50" max="18" step="0.5"></money-input>
+          </field-element>
+
+          <pin-input></pin-input>
+
+          <button-control label="test"></button-control>
+        </form>
+      </section>
+    </content-container>
+
+    <content-container>
+      <strip-list label="List of things">
+        <button-control slot="buttons" label="Open Panel" tight theme="light" onclick="openPanel()"></button-control>
+        <li>
+          Something
+          <aside>
+            <text-button theme="blue">Edit</text-button>
+            <text-button theme="red">Delete</text-button>
+          </aside>
+        </li>
+        <li>Another list item</li>
+        <li>More list things</li>
+      </strip-list>
+    </content-container>
+
+    <footer-container>
+      <section>
+        <h1>This is a footer section</h1>
+        This is section text
+      </section>
+      <section>
+        <h1>This is a footer section</h1>
+        This is section text
+      </section>
+      <section>
+        <h1>This is a footer section</h1>
+        This is section text
+      </section>
+      <address slot="address">
+        <p>Peterborough Tenants Union Ltd.</p>
+        <p>Company limited by guarantee: 13171833, registered in England & Wales. 82A James Carter Road, Mildenhall, Suffolk, IP28 7DE.</p>
+      </address>
+    </footer-container>
+
+    <side-panel id="mainPanel" label="This is a section">
+      <section>
+        <alert-element>This is some information</alert-element>
+        <alert-element theme="warning">This is some information</alert-element>
+        <alert-element theme="danger">This is some information</alert-element>
+        <alert-element theme="good">This is some information</alert-element>
+      </section>
+      <footer>
+        <button-control theme="light" onclick="closePanel()">Cancel</button-control>
+        <button-control theme="blue">Save</button-control>
+      </footer>
+    </side-panel>
+
+    <script>
+      function openPanel() {
+        let panel = document.getElementById('mainPanel');
+        panel.setAttribute('open', true);
+      }
+
+      function closePanel() {
+        let panel = document.getElementById('mainPanel');
+        panel.setAttribute('open', false);
+      }
+    </script>
+  </body>
+</html>

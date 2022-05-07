@@ -1,0 +1,153 @@
+money-input {
+  outline: none;
+  border: 1.66px solid var(--gray-5);
+  font-size: large;
+  font-weight: 300;
+  padding: 1.4ex 1.66ex;
+  border-radius: 0.33ex;
+  color: var(--gray-6);
+  max-width: 600px;
+  width: 100%;
+  background-color: #fff;
+  font-family: 'Inter var';
+  align-items: center;
+  display: flex;
+
+  &:hover {
+    border: 1.66px solid var(--black);
+    box-shadow: 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+  }
+
+  &:focus-within {
+    border: 1.66px solid var(--black);
+    box-shadow: 0px 0px 0 0.3ex inset var(--sand), 0px 0px 0 0.5ex var(--yellow);
+  }
+
+  p {
+    position: relative;
+    font-size: 19pt;
+    border-radius: 3px;
+    width: 200px;
+    color: var(--black);
+    margin: 0 !important;
+    padding: 0;
+  }
+
+  input[type='range'] {
+    position: relative;
+    width: 100%;
+    -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+    background: transparent; /* Otherwise white in Chrome */
+  }
+
+  input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none;
+  }
+
+  input[type='range']:focus {
+    outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+  }
+
+  input[type='range']::-ms-track {
+    width: 100%;
+
+    /* Hides the slider so custom styles can be added */
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+  }
+
+  input[type='range'] {
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      height: 3em;
+      width: 2em;
+      cursor: grab;
+      margin: -10px 0;
+
+      outline: none;
+      background-color: var(--blue);
+      color: var(--light-colour);
+      border-radius: 0.33ex;
+      border: 1px solid rgba(10, 10, 10, 0.12);
+      box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.22), 0 0ex 0ex 0ex rgba(10, 10, 10, 0);
+      &:hover {
+        filter: brightness(1.08);
+        box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.22), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+        border: 1px solid rgba(10, 10, 10, 0.18);
+      }
+      &:active {
+        box-shadow: 0px -10px 1.12px -8px inset rgba(10, 10, 10, 0.22), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+        cursor: grabbing;
+      }
+    }
+
+    &::-ms-thumb {
+      height: 3em;
+      width: 2em;
+      cursor: grab;
+      margin: -10px 0;
+
+      outline: none;
+      background-color: var(--blue);
+      color: var(--light-colour);
+      border-radius: 0.33ex;
+      border: 1px solid rgba(10, 10, 10, 0.12);
+      box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.22), 0 0ex 0ex 0ex rgba(10, 10, 10, 0);
+      &:hover {
+        filter: brightness(1.08);
+        box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.22), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+        border: 1px solid rgba(10, 10, 10, 0.18);
+      }
+      &:active {
+        box-shadow: 0px -10px 1.12px -8px inset rgba(10, 10, 10, 0.22), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+        cursor: grabbing;
+      }
+    }
+
+    &::-moz-range-thumb {
+      height: 3em;
+      width: 2em;
+      cursor: grab;
+      margin: -10px 0;
+
+      outline: none;
+      background-color: var(--blue);
+      color: var(--light-colour);
+      border-radius: 0.33ex;
+      border: 1px solid rgba(10, 10, 10, 0.12);
+      box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.22), 0 0ex 0ex 0ex rgba(10, 10, 10, 0);
+      &:hover {
+        filter: brightness(1.08);
+        box-shadow: 0px -10px 1.12px -4px inset rgba(10, 10, 10, 0.22), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+        border: 1px solid rgba(10, 10, 10, 0.18);
+      }
+      &:active {
+        box-shadow: 0px -10px 1.12px -8px inset rgba(10, 10, 10, 0.22), 0 0 0.5ex -0.1ex rgba(10, 10, 10, 0.22);
+        cursor: grabbing;
+      }
+    }
+
+    /* track */
+    &::-webkit-slider-runnable-track {
+      border: 1px solid var(--gray-3);
+      border-radius: 0.33ex;
+      box-shadow: 0px 0px 0 0.3ex inset var(--sand);
+      cursor: pointer;
+    }
+
+    &::-moz-range-track {
+      border: 1px solid var(--gray-3);
+      border-radius: 0.33ex;
+      box-shadow: 0px 0px 0 0.3ex inset var(--sand);
+      cursor: pointer;
+    }
+
+    &::-ms-track {
+      border: 1px solid var(--gray-3);
+      border-radius: 0.33ex;
+      box-shadow: 0px 0px 0 0.3ex inset var(--sand);
+      cursor: pointer;
+    }
+  }
+}

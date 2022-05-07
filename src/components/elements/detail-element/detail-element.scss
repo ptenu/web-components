@@ -1,0 +1,77 @@
+detail-element {
+  display: block;
+  color: var(--gray-5);
+
+  summary {
+    display: inline;
+    cursor: pointer;
+  }
+
+  summary::marker,
+  summary::-webkit-details-marker {
+    display: none;
+  }
+
+  summary::before {
+    font-size: 1.22rem;
+    color: var(--black);
+    content: '+';
+    width: 1.12ex;
+    margin-right: 1ex;
+    display: inline-block;
+    text-align: center;
+  }
+
+  details[open] summary::before {
+    content: '-';
+  }
+
+  details > div {
+    margin: 1ex 0 1ex 3ex;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: 'Inter';
+    color: var(--blue-dark);
+    margin: 0;
+    text-decoration: underline;
+    text-decoration-color: var(--sand);
+    text-decoration-thickness: 0.15em;
+    line-height: 1.8rem;
+  }
+
+  summary:focus {
+    outline: none;
+    background-color: none;
+  }
+
+  summary:focus h1,
+  summary:focus h2,
+  summary:focus h3,
+  summary:focus h4,
+  summary:focus h5,
+  summary:focus h6 {
+    background-color: var(--yellow);
+    color: var(--black);
+    text-decoration-color: var(--black);
+  }
+
+  summary:hover h1,
+  summary:hover h2,
+  summary:hover h3,
+  summary:hover h4,
+  summary:hover h5,
+  summary:hover h6 {
+    background-color: var(--blue);
+    color: #fff;
+    text-decoration: none;
+  }
+}

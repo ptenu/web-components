@@ -1,0 +1,208 @@
+@import url('https://static.peterboroughtenants.app/inter/inter.css');
+@import url('https://static.peterboroughtenants.app/Source_Code_Pro/SourceCodePro.css');
+@import url('https://static.peterboroughtenants.app/Source_Serif_Pro/SourceSerifPro.css');
+
+body > *:not(.hydrated) {
+  visibility: hidden;
+}
+
+:root {
+  /* Brand Colours */
+  --primary-red: #e54360;
+  --primary-contrast: #070a0d;
+
+  /* Accent colours */
+  --sand: #d6d1c4;
+  --red-light: #ea8a9b;
+  --blue-dark: #093b5a;
+  --primary-dark: #663c44;
+
+  --blue-gray: #8ca7ed;
+  --blue-gray-contrast: var(--black);
+
+  /* Monochrome colours */
+  --white: #dce3eb;
+  --gray-1: #c7ced6;
+  --gray-2: #b2b9c1;
+  --gray-3: #9ca4ab;
+  --gray-4: #727981;
+  --gray-5: #474f56;
+  --gray-6: #323a41;
+  --black: #1d252c;
+
+  /* semantic colours */
+  --blue: #0068a1;
+  --blue-contrast: #ebf2fa;
+  --yellow: #e6de5a;
+  --yellow-contrast: var(--black);
+  --green: #38d956;
+  --green-contrast: var(--black);
+  --red: #d63c4e;
+  --red-contrast: #fff;
+}
+
+*,
+button {
+  font-family: 'Inter';
+  line-height: 1em;
+  font-size: 12.5pt;
+}
+
+code,
+mark,
+pre {
+  font-family: 'Source Code';
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-size: 12.5pt;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd,
+li {
+  line-height: 1.33em;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+ul:not([role='list']) {
+  column-width: 23ex;
+}
+
+ul:not([role='list']) > li:before {
+  content: '↳';
+  margin-right: 1ex;
+}
+ul:not([role='list']) > li {
+  margin-bottom: 0.5ex;
+}
+
+ul,
+ol,
+dl,
+li,
+dd,
+dt {
+  margin: 0 1ex;
+  padding: 0;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: 'Inter';
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Inter';
+  color: var(--blue-dark);
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 30pt;
+}
+
+section p,
+article p {
+  margin-bottom: 1ex;
+}
+
+p,
+ul,
+ol,
+.typeography {
+  font-weight: 300;
+
+  * {
+    font-weight: 300;
+  }
+}
+
+blockquote {
+  margin: 1ex;
+  padding: 1ex 2ex;
+  border-left: 4px solid var(--white);
+  color: var(--gray-5);
+  font-weight: 300;
+  font-size: 13.5pt;
+}

@@ -1,0 +1,38 @@
+alert-element {
+  background-color: var(--white);
+  color: var(--black);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin: 2ex 0;
+  gap: 1ex;
+
+  &.warning {
+    background-color: var(--yellow);
+    color: var(--yellow-contrast);
+  }
+
+  &.danger {
+    background-color: var(--red-light);
+  }
+
+  &.good {
+    background-color: var(--green);
+  }
+
+  &.hide {
+    display: none;
+  }
+
+  button {
+    color: var(--black) !important;
+  }
+  aside {
+    padding: 1ex;
+  }
+
+  div {
+    padding: 2.22ex;
+    opacity: 0.88;
+  }
+}

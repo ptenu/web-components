@@ -1,0 +1,17 @@
+details-list {
+  display: flex;
+  flex-direction: column;
+
+  &:not(:first-of-type) {
+    border-top: 2px solid var(--gray-1);
+    margin-top: 1ex;
+    padding-top: 1ex;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  details-list {
+    display: inline-flex;
+    min-width: 450px;
+  }
+}
