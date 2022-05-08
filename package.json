@@ -1,6 +1,6 @@
 {
   "name": "ptu-elements",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Design elements for use with Peterborough Tenants' Union websites and apps.",
   "author": "Alex Hall <alex.hall@peterboroughtenants.org> (https://www.peterboroughtenants.org)",
   "main": "dist/index.cjs.js",
