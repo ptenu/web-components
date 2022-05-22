@@ -348,6 +348,7 @@ declare namespace LocalJSX {
     interface PostcodeInput {
         "initialValue"?: string;
         "name"?: string;
+        "onChanged"?: (event: CustomEvent<string>) => void;
         "value"?: string;
     }
     interface SidePanel {

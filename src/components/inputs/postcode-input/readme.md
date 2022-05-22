@@ -14,6 +14,13 @@
 | `value`        | `value`         |             | `string` | `undefined`  |
 
 
+## Events
+
+| Event     | Description | Type                  |
+| --------- | ----------- | --------------------- |
+| `changed` |             | `CustomEvent<string>` |
+
+
 ## Dependencies
 
 ### Depends on
