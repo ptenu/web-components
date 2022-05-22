@@ -12,7 +12,10 @@ export class PostcodeInput {
 
   @Event() changed: EventEmitter<string>;
 
-  updateValue(value: string, type: 'outcode' | 'incode') {
+  updateValue(e: CustomEvent, type: 'outcode' | 'incode') {
+    let value = e.detail;
+    e.stopPropagation();
+
     if (type == 'outcode' && value.length >= 3) {
       let nextInput = document.querySelector(`#${this.name}__incode`) as HTMLElement;
       nextInput.focus();
@@ -34,8 +37,8 @@ export class PostcodeInput {
   render() {
     return (
       <Host>
-        <text-input name={this.name + '__outcode'} width={9} value={this.value} onChanged={e => this.updateValue(e.detail, 'outcode')}></text-input>
-        <text-input name={this.name + '__incode'} width={8} value={this.value} onChanged={e => this.updateValue(e.detail, 'incode')}></text-input>
+        <text-input name={this.name + '__outcode'} width={9} value={this.value} onChanged={e => this.updateValue(e, 'outcode')}></text-input>
+        <text-input name={this.name + '__incode'} width={8} value={this.value} onChanged={e => this.updateValue(e, 'incode')}></text-input>
       </Host>
     );
   }
