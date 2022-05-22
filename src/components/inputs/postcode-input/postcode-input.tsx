@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'postcode-input',
@@ -9,6 +9,8 @@ export class PostcodeInput {
   @Prop() initialValue: string;
 
   @Prop({ mutable: true, reflect: true }) value: string;
+
+  @Event() changed: EventEmitter<string>;
 
   updateValue(value: string, type: 'outcode' | 'incode') {
     if (type == 'outcode' && value.length >= 3) {
@@ -26,6 +28,7 @@ export class PostcodeInput {
     let newObj = Object.create(currentObj);
     newObj[type] = value.toUpperCase().trim();
     this.value = newObj.outcode + ' ' + newObj.incode;
+    this.changed.emit(this.value);
   }
 
   render() {
